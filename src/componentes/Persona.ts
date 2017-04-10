@@ -1,14 +1,21 @@
 class Persona {
-    private name:string;
-    private age:number;
+    private _name:string;
+    private _age:number;
     
     constructor(name?:string, age?:number){
-        this.name = name;
-        this.age = age;
+        this._name = name;
+        this._age = age;
     }
 
     toString(){
-        return `${this.name} ${this.age}`;
+        return `${this._name} ${this._age}`;
+    }
+
+    get name():string{
+        return this._name;
+    }
+    get age():number{
+        return this._age;
     }
 }
 
